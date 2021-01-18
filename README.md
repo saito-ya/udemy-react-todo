@@ -44,3 +44,19 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Deploy to Firebase
+
+1 `yarn run build`
+
+1. `yarn global add firebase-tools`
+1. `firebase login`
+1. `firebase init`  
+   Chose the following.
+   - Which Firebase CLI features do you want to set up for this folder? => `Hosting: Configure and deploy Firebase Hosting sites`
+   - Please select an option => `Use an existing project`
+   - Select a default Firebase project for this directory => project created
+   - What do you want to use as your public directory? => `build`
+   - Configure as a single-page app => `y`
+   - File already exists. Overwrite? => `N`
+1. `firebase deploy` => hosting url is issued.
